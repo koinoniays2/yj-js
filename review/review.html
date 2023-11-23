@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hello {
+            color : green;
+            font-size: 50px;
+        }
+        .sum {
+            color : coral;
+            font-size: 50px;
+        }
+        .prom {
+            color: brown;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        
+    // 변수(문자형)
+    /*
+    var s = "javascript";
+    var num = "100";
+    var tag = "<h1>String</h1>"
+
+    document.write(s);
+    document.write(num);
+    document.write(tag);
+
+    console.log(typeof s); // string
+    console.log(typeof num); // string
+    console.log(typeof tag); // string
+    */
+
+    // 숫자형
+    /*
+    var s = 100;
+    var b = "200";
+    var t=Number("500");
+
+    console.log(s); // 100
+    console.log(s+b); // 100200
+    console.log(typeof (s + b)); // string
+    console.log(typeof (s - b)); // number
+    console.log(t);// 500
+
+    console.log(typeof s); // number
+    console.log(typeof t); // number
+    */
+
+    // 논리형(boolean) 숫자0, null, undefined, 빈문자=false 를 제외한 모든 데이터는 true
+    /*
+    var a = true; // true
+    var b = 10>=100 // false
+    var c = Boolean("hello"); // true
+    var d = Boolean(0); // false
+    var e = Boolean(null); // false
+    var f = Boolean(); // false
+    console.log(a, b, c, d, e, f);
+    */
+
+    // null & undefined
+    /*
+    var s; // 선언만
+    var t="hello";
+    t=null; // null 대입
+    console.log(typeof s); // undefined
+    console.log(typeof t); //object타입이 나온다. 타입이 null인데 왜? > JS의 오류
+    console.log(Boolean(null===undefined)); //false
+    console.log(Boolean(null==undefined)); //true
+    */
+
+    // 변수 선언 주의사항
+    /*
+    // var 1num = 10; X 첫글자로는 $,_,영문자만
+    var $num = 10;
+
+    // var 100num = 10; X
+    var num100 = 10;
+    
+    // var document = 10; X 예약어 사용안됨
+    var num = 10;
+
+    //var num = "hello"; 변수명에 의미부여 명확하게
+    var num = 10;
+
+    var num = 10;
+    // document.write(Num) X 대,소문자 구분
+    document.write(num);
+    */
+
+    // 산술 연산자
+    /*
+    document.write("console로 확인하기");
+
+    let num1 = 15;
+    let num2 = 2;
+    let result;
+
+    result = num1 + num2;
+    console.log(result);
+    result = num1 - num2;
+    console.log(result);
+    result = num1 * num2;
+    console.log(result);
+    result = num1 / num2;
+    console.log(result);
+    result = num1 % num2;
+    console.log(result);
+    */
+
+    // 문자 결합 연산자
+    /*
+    let t1 = "학교종이";
+    let t2 = " 떙떙떙 ";
+    const t3 = 8282;
+    let t4 = " 어서 모이자";
+    result = t1 + t2 + t3 + t4;
+    console.log(result);
+    */
+    
+    // 대입 연산자
+    /*
+    let num1 = 10;
+    let num2 = 3;
+    
+    num1 += num2;
+    console.log(num1); //13
+    num1 -= num2;
+    console.log(num1); //10
+    num1 *= num2;
+    console.log(num1); //30
+    num1 %= num2;
+    console.log(num1); //0
+    */
+
+    // 플러터?
+    /*
+    let str;
+    // str += "<table border=\"1\">";
+    str += `<table border=1>`;
+    str += "    <tr>";
+    str += "        <td>1</td> \
+                    <td>2</td> \
+                    <td>3</td>";
+    str += "    </tr>";
+    str += "</table>";
+    document.write(str);
+    */
+
+    // 증감연산자
+    /*
+    let num1 = 10;
+    let num2 = 20;
+    let result;
+
+    num1--;
+    console.log(num1); //9
+    num1++;
+    console.log(num1); //10
+    
+    result = num2++;
+    console.log(result); // 20
+    console.log(num2); // 21
+    
+    result = num2++;
+    console.log(result); // 21
+    console.log(num2); // 22
+    
+    result = ++num2;
+    console.log(result); // 23
+    */
+    
+    // 비교연산자
+    /*
+    let a = 10;
+    let b = 20;
+    let c = 10;
+    let f = "20";
+    let resut;
+
+    resut = a > b; // false
+    console.log(resut);
+    resut = a < b; // true
+    console.log(resut);
+    resut = a <= b; // true
+    console.log(resut);
+    resut = b == f; // true
+    console.log(resut);
+    resut = a != b; // ture
+    console.log(resut);
+    resut = b === f; // false
+    console.log(resut);
+    */
+    
+    // 논리연산자
+    /*
+    let a = 10;
+    let b = 20;
+    let m = 30;
+    let n = 40;
+    let result;
+
+    result = a > b||b >= m||m > n;
+    console.log(result); // false
+    result = a > b||b >= m||m <= n;
+    console.log(result); // true
+    result = a <= b&&b >= m&&m <= n;
+    console.log(result); // false
+    result = a <= b&&b <= m&&m <= n;
+    console.log(result); // true
+
+    result = !(a > b);
+    console.log(result); // ture
+    */
+
+    // 삼항조건연산자
+    /*
+    let a = 10;
+    let b = 3;
+    
+    let result = a > b ? "Javascript" : "hello";
+    console.log(result); // Javascript
+    */
+
+    // 적정 체중 구하기
+    /*
+    let name = prompt("당신의 이름은?","");
+    let higth = prompt("당신의 신장은?","0");
+    let weight = prompt("당신의 몸무게는?","0");
+
+    let normal_w = (higth - 100) * 0.9;
+    let result = weight >= (normal_w - 5) && weight <= (normal_w + 5) // 180, 70이 들어가면 56<=normal_w,normal_w<=66
+    result = result ? "적정 체중입니다." : "적정 체중이 아닙니다."
+
+    document.write(`${name}님은 ${result}`);
+    */
+
+    // 하루 지출 비용의 합계를 구한 후 적정 지출 비용의 초과여부
+    /*let price1 = 3000;
+    let price2 = 6000;
+    let price3 = 3000;
+    let out = 10000;
+    let result;
+    let out_spend = (price1 + price2 + price3)-out; // 초과된 금액
+
+    result = price1 + price2 + price3 > out ? `${out_spend} 초과 <br />` : `돈관리 잘했어요! <br />`;
+    document.write(result);
+    */
+
+    // 함수 호출로 지출 비용 구하기
+    /*
+    function expense(x, z, y) {
+        let wealth = Number(prompt("오늘의 적정 지출비용은 얼마로 생각하세요?"));
+        let sum = x + z + y;
+        let sum_m = `오늘의 총 지출은 ${sum} 입니다.`
+        let result = sum > wealth ? `${sum_m} 지출비용 초과했어요!` : `${sum_m} 지출비용 미달. 잘 하셨네요~!`;
+        let each
+        document.write(result);
+    }
+    expense(Number(prompt("오늘의 교통비는?")), Number(prompt("오늘의 식비는?")), Number(prompt("오늘의 커피값은?"))); // 함수 호출
+     */
+    
+
+    // 평균 판매량을 구하고 4분기 판매량을 입력하여 평균 판매량의 이상/미달값 출력
+    /*
+    let sales1 = 1200;
+    let sales2 = 1300;
+    let sales3 = 1000;
+    let sales4 = prompt("4분기 판매량을 입력하세요.");
+    let avg_sales = (sales1 + sales2 + sales3) / 3; //1, 2, 3분기 평균 판매량 구하기
+    //console.log(Math.round(avg_sales)); // 평균 판매량 결과 확인(1167)
+    let avg_sales4; // 1, 2, 3 평균 판매량과 4분기 판매량 비교
+    avg_sales4 = sales4 >= Math.round(avg_sales) ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+    document.write(avg_sales4);
+    */
+
+
+    // 문제 1. 정수 입력받고 합 구하기
+    /*
+    alert("다섯자리 정수를 입력하세요");
+    let user_num = Number(prompt("12345"));
+    let num = user_num;
+    
+    // num = 12345
+    let num1 = parseInt(num / 10000); // num1 = 1
+    num = num % 10000; // num = 2345
+    let num2 = parseInt(num / 1000); // num2 = 2
+    num = num % 1000; // num = 345
+    let num3 = parseInt(num / 100); // num3 = 3
+    num = num % 100; //num = 45
+    let num4 = parseInt(num / 10); // num4 = 4
+    num = num % 10; // num = 5
+    let num5 = parseInt(num) // num5 = 5
+    */
+
+    //
+    /*
+    let input = prompt("다섯자리 정수를 입력하시오");
+    let inputLength = input.length
+    let numSapce = [];
+
+    //12345
+
+    for(let i=0;i<inputLength;i++){
+    numSapce[i] = input % 10;
+    input = parseInt(input / 10); 
+    }
+
+    //54321
+    numSapce.reverse();
+
+    //12345
+
+    let sum = 0;
+
+    //12345
+
+    //1 +2 +3 + 4+ 5 = sum
+
+    for(let j=0;j<numSapce.length;j++){
+
+    sum += numSapce[j] //1
+    if(j === numSapce.length-1) {
+        document.write(`${numSapce[j]} = ${sum}`)
+    } else {
+        document.write(`${numSapce[j]} +`)
+    }
+    
+    }
+    */
+    
+    // 배열에 입력받은 정수 담기
+    /*
+    var arr = new Array(5);
+    for(var i = 0; i < arr.length; i++) {
+        arr[i] = Number(prompt(`${i+1}번째 정수`));
+    }
+    var sum = 0;
+    // 입력받은 정수 출력과 합 합 구하기
+    for(var i in arr) {
+        document.write(`${arr[i]}`);
+            if(arr[i]==arr.length){
+            document.write(` = `);
+            }else{
+                document.write(` + `);
+            }
+        sum += arr[i];
+    }
+    document.write(sum);
+    */
+
+    // 문제 2. 성별과 몸무게 입력받고 비만도 출력  
+    /*
+    function inspect(x, y) {
+        let gender = x; 
+        let weight = y;
+        if(!(x==1 || x==2) || (y <= 0 || 200 < y)) {
+            alert("성별이나 몸무게를 잘못입력하셨습니다.");
+            location.reload(true);
+        }else {
+            switch(gender) {
+                case 1:
+                    if(weight>=85) {
+                        document.write("과체중 입니다.");
+                    }else if(weight>=50 && 85 > weight) {
+                        document.write("표준 체중입니다.");
+                    }else {
+                        document.write("표준 체중 이하입니다.");
+                    }
+                    break;
+                case 2:
+                    if(weight>=68) {
+                        document.write("과체중 입니다.");
+                    }else if(weight>=40 && 68 > weight) {
+                        document.write("표준 체중입니다.");
+                    }else {
+                        document.write("표준 체중 이하입니다.");
+                    }
+                    break;
+            }
+        }
+    }
+    inspect(Number(prompt("성별을 입력하세요(남성은 1, 여성은 2)")), Number(prompt("체중을 입력하세요(1~200)")));
+    */
+
+
+
+    // 문제 3. 학생들의 성적을 입력받고 학점 결정
+    /*
+    var score = Number(prompt("성적을 입력하세요."));
+    var grade;
+    var message1 = "축하합니다. "
+    var message2 = "입니다."
+    if(score > 100 || 0 > score){
+        document.write("점수를 제대로 입력하세요.");
+    }else if(score >= 95) {
+        grade = "A+";
+        document.write(message1+grade+message2);
+    }else if(score < 95 && 90 <= score) {
+        grade = "A";
+        document.write(message1+grade+message2);
+    }else if(score < 90 && 85 <= score) {
+        grade = "B+";
+        document.write(message1+grade+message2);
+    }else if(score < 85 && 80 <= score) {
+        grade = "B";
+        document.write(message1+grade+message2);
+    }else if(score < 80 && 75 <= score) {
+        grade = "C+";
+        document.write(message1+grade+message2);
+    }else if(score < 75 && 70 <= score) {
+        grade = "C";
+        document.write(message1+grade+message2);
+    }else if(score < 70 && 65 <= score) {
+        grade = "D+";
+        document.write(message1+grade+message2);
+    }else if(score < 65 && 60 <= score) {
+        grade = "D";
+        document.write(message1+grade+message2);
+    }else{
+        grade = "F";
+        document.write(message1+grade+message2);
+    }
+    */
+
+    // if 조건문
+    /*
+    let walkAmount = prompt("당신의 하루 걷는 양은 몇보인가요?");
+    if(walkAmount >= 10000) {
+        document.write("매우 좋은 습관을 지니고 계시는군요!!", "<br />");
+    }
+    document.write("============ The End ============");
+    */
+   // 출력 되지 않는경우
+   /*
+    var num = 3;
+    if(num){
+        console.log(num);
+    }
+
+    var num = 0; // 0은 false
+    if(num){
+        document.write(num);
+    }
+    */
+   /* 
+   // 숫자0, null, undefined, 빈문자를 제외한 모든 데이터는 true
+   let userName = prompt("방문자의 이름은?");
+    if(userName) {
+        document.write(userName + "님 반갑습니다! 방문을 환영합니다.");
+    }
+    */
+   
+    // else문
+    /*
+    let num = prompt("당신이 좋아하는 숫자는?");
+    if(num % 2 == 0) {
+        document.write("당신이 좋아하는 숫자는 짝수입니다.");
+    }else {
+        document.write("당신이 좋아하는 숫자는 홀수입니다.");
+    }
+    */
+    //confirm()
+    /*
+    var result = confirm("정말로 회원탈퇴 하시겠습니까?");
+    if(result){
+        document.write("탈퇴 처리되었습니다.");
+    }else {
+        document.write("탈퇴 취소되었습니다.");
+    }
+    */
+    
+    // else if문
+    /*
+    let mon = prompt("현재는 몇 월 입니까?");
+
+    if(mon >=9 && mon <= 11) {
+        document.write("독서의 계절 가을이네요.");
+    }else if(mon >= 6 && mon <= 8) {
+        document.write("여행가기 좋은 여름이네요.");
+    }else if(mon >= 3 && mon <= 5) {
+        document.write("햇살 가득한 봄이네요.");
+    }else {
+        document.write("스키의 계절 겨울이네요.");
+    }
+    */
+
+    // 중첩 if문
+    /*
+    let id = "easy1004";
+    let pw = "112233";
+
+    let user_id = prompt("아이디는?");
+    let user_pw = prompt("비밀번호는?");
+
+    if(id == user_id) {
+        if(pw == user_pw) {
+            document.write(user_id+"님 반갑습니다.");
+        }else {
+            alert("비밀번호가 일치하지 않습니다.");
+            location.reload();
+        }
+    }else {
+        alert("아이디가 일치하지 않습니다.");
+        location.reload();
+    }
+    */
+
+    // 연습문제 커피
+    /*
+    let user_coffe = prompt("어떤 종류의 커피를 주문하시겠습니까?(에스프레소, 아메리카노, 카페라떼)");
+    let user_size = prompt("커피 사이즈를 선택하세요.(S, M, L)");
+    let size = user_size.toUpperCase();
+    let price = 0;
+
+    if(user_coffe == "에스프레소" || user_coffe == "아메리카노" || user_coffe == "카페라떼") {
+        if(size == "S" || size == "M" || size == "L") {
+            if(user_coffe=="에스프레소") {
+                if(size=="S") {
+                    price = 2000;
+                }else if(size=="M"){
+                    price = 2500;
+                }else {
+                    price = 3000;
+                }
+                document.write(`당신이 주문한 커피는 ${user_coffe} ${price}원 입니다.`);
+            }else if(user_coffe=="아메리카노") {
+                if(size=="S") {
+                    price = 2500;
+                }else if(size=="M"){
+                    price = 3000;
+                }else {
+                    price = 3500;
+                }
+                document.write(`당신이 주문한 커피는 ${user_coffe} ${price}원 입니다.`);
+            }else {
+                if(size=="S") {
+                    price = 3000;
+                }else if(size=="M"){
+                    price = 3500;
+                }else {
+                    price = 4000;
+                }
+                document.write(`당신이 주문한 커피는 ${user_coffe} ${price}원 입니다.`);
+            }
+        }else {
+            alert("사이즈가 없습니다.");
+            location.reload();
+        }
+    }else {
+        alert("커피가 없습니다.");
+        location.reload();
+    }
+    */
+
+    /* 1120 연습문제
+    var age = parseInt(prompt("나이를 입력하세요"));
+    var gender = prompt("성별을 입력하세요(남,여)");
+
+    if(age >= 18) {
+        if(gender === "남"){
+            alert("남자는 이용료가 20,000원 입니다.");
+        }else if(gender ==="여") {
+            alert("여자는 이용료가 10,000원 입니다.")
+        }else{
+            alert("성별을 잘못 입력하셨습니다.");
+            location.reload();
+        }
+    }else {
+        document.write("18세 이상만 입장이 가능합니다.");
+    }
+    */
+
+    //switch문
+    /*
+    var site = prompt("네이버, 다음, 네이트, 구글 중 즐겨 사용하는 포털 검색사이트는?");
+    var url;
+
+    switch(site) {
+        case "구글": url = "www.google.com";
+        break;
+        case "다음": url = "www.daum.net";
+        break;
+        case "네이버": url = "www.naver.com";
+        break;
+        case "네이트": url = "www.nate.com";
+        break;
+        default: alert("보기 중에 없는 사이트입니다.");
+    }
+
+    if(url)
+        window.open("http://" + url); // 새창열기
+    */
+
+    // 요일을 확인하고싶은 날짜
+    /*
+    let promptDay = prompt("요일을 확인하고 싶은 날짜를 입력해주세요(2023-11-20)");
+    console.log(promptDay);
+    let tempData = new Date(promptDay);
+    let day = tempData.getDay();
+    switch(day) {
+        case 0: 
+            document.write("일요일");
+            break;
+        case 1:
+            document.write("월요일");
+            break;
+        case 2:
+            document.write("화요일");
+            break;
+        case 3:
+            document.write("수요일");
+            break;
+        case 4:
+            document.write("목요일");
+            break;
+        case 5:
+            document.write("금요일");
+            break;
+        case 6:
+            document.write("토요일");
+            break;
+        default:
+            document.write("날짜를 잘못 입력했습니다.");
+    }
+    */
+
+    /*
+    var like = prompt("좋아하는 과일을 선택해주세요.(사과, 바나나, 오렌지 중)");
+    switch(like){
+        case "사과":
+            alert(`${like}를 선택하셨습니다.`);
+            break;
+        case "바나나":
+            alert(`${like}를 선택하셨습니다.`);
+            break;
+        case "오렌지":
+            alert(`${like}를 선택하셨습니다.`);
+            break;
+        default:
+            document.write("다른 과일을 선택하셨습니다.");
+    }
+    */
+
+    // while문
+    /*
+    var i = 0;
+    while(i<10) {
+        i++;
+        if(i===5){
+            continue; // 5만 빼고 출력
+        }
+        document.write("안녕하세요" + i, "<br />");
+    }   
+    document("==== The End ====");
+    */
+   
+    /*
+    var i = 1;
+    while(i<=30) {
+        if(i % 2 === 0 && i % 6 === 0) {
+            document.write(i, "<br />");
+        }
+        i++
+    }
+    */
+    
+    //10까지의 합 구하기
+    /*
+    var i = 1;
+    var sum = 0;
+    while(i<=10) {
+        sum += i++;
+    }
+    document.write(sum);
+    */
+
+    /*
+    var i = 20;
+    while(i>=10) {
+        if(i % 2 === 0) {
+            document.write(`<p style="color:blue">${i}</p>`);
+        }else {
+            document.write(`<p style="color:red">${i}</p>`);
+        }
+        i--;
+    }
+    */
+    /*
+    const pattern = /(^\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/
+    console.log(pattern.test("2023-12-12"));
+    */
+    
+    /*var i = 10;
+    do {
+        var str = "Hello";
+        document.write(`<p class=hello>${str}</p>`);
+    } while(i<3)
+    */
+
+    // do-while문 퀴즈
+    /*
+    do {
+        var prom = Number(prompt("숫자를 입력하세요(1~10)"));
+        if(0 < prom && prom <= 10) {
+            document.write(`입력한 숫자는 ${prom}`);
+        }else {
+            alert("알맞은 숫자가 아닙니다.");
+        }
+    } while(prom > 10 || 1 > prom || isNaN(prom)); //숫자면 false, true면 계속 do로 돌아감
+    */
+
+    /*
+    var a = "a";
+    console.log(parseInt(a)); //a의 값은 NaN
+    console.log(typeof (parseInt(a))); // NaN의 타입은 number기때문에 number가뜬다.
+    console.log(isNaN(parseInt(a))); //true
+    */
+
+    /*
+    var num = parseInt(prompt("숫자를 입력하세요."));
+    var i = 1;
+    do {
+        document.write(`안녕하세요 ${i} <br/>`);
+        i++
+        } while(i <= num);
+    */
+
+    // for문
+    /*
+    for(var i = 1; i <= 10; i++){
+        document.write(`반복 ${i} <br />`);
+    }
+    */
+    /*
+    for(var i = 1; i <= 100; i++) {
+        if(i % 5 === 0 && i % 7 !== 0){
+            document.write(`<p style="color:red">5의 배수면서 7의 배수가 아닌것${i}</p>`);
+        }else if(i % 5 !== 0 && i % 7 === 0){
+            document.write(`<p style="color:green">7의 배수면서 5의 배수가 아닌것${i}</p>`);
+        }else if(i % 5 === 0 && i % 7 === 0){
+            document.write(`<p style="color:aqua">5의 배수이면서 7의 배수인것${i}</p>`)
+        }
+    }
+    */
+   /*
+   let sum = 0;
+   for(var i=0; i<10; i++){
+       sum += (i+1);
+   }
+   document.write(`<p class="sum">${sum}</p>`);
+   */
+
+   //break문
+   /*
+   for(var i=1; i<=10; i++) {
+       if(i===6) break;
+       document.write(i, "<br />");
+    }
+    document.write("=== The End ===");
+    */
+
+    /*
+    let sum = 0;
+    let i;
+    for(let i=0; i<100; i++) {
+        if((sum += (i+1))>100)
+        break;
+    }
+    document.write(`숫자의 합이 100이 넘는 순간: ${i+1}일때 ${sum}`);
+    */
+
+    //cuntinue문
+    /*
+    for(let i=1; i<=10; i++) {
+        if(i % 2 === 0) continue;
+        document.write(i, "<br>");
+    }
+    document.write("===The End===");
+    */
+
+    //퀴즈 6의 배수만 출력 안하는 프로그램
+    /*
+    let prom = prompt("숫자를 입력하세요");
+    if(isNaN(prom)) {
+        alert("숫자가 아닙니다.");
+        location.reload();
+    }else {
+        for(let i=1; i<=prom; i++){
+            if(i % 6 ==0) continue;
+            document.write(`<p class="prom">${i}</p>`);
+        }
+    }*/
+    //중첩 for문
+    /*
+    for(let i=1; i<=3; i++) {
+        for(let j=1; j<=2; j++) {
+            document.write(`${i}행 ${j}열 <br />`)
+        }
+        document.write("<br />");
+    }
+    */
+
+    //7단 8단 9단, 5~10까지 곱할것
+    /*
+    document.write("<table border='1'>");
+    for(let i=7; i<=9; i++){
+        document.write("<tr>");
+        for(let j=5; j<=10; j++){
+            document.write(`<td>${i*j}</td>`);
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+    */
+   /*별찍기
+    *
+    **
+    ***
+    ****
+    *****
+   */
+    /*
+    for(let i=0; i<5; i++){
+        for(let j=0; j<=i; j++) {
+            document.write("*");
+        }
+        document.write("<br />");
+    }
+    */
+    /*별찍기
+    *****
+    ****
+    ***
+    **
+    *
+   */
+    /*
+    for(let i=0; i<5; i++){
+        for(let j=5; i<j; j--){
+            document.write("*"); 
+        }
+        document.write("<br />");
+    }
+    */
+    /*
+        *
+       **
+      ***
+     ****
+    *****   
+    */
+   /*
+    for(let i=0; i<5; i++){
+        for(let j=5; i<(j-1); j--){
+            document.write("-");
+        }
+        for(let k=0; k<=i; k++){
+        document.write("*");
+        }
+    document.write("<br />");
+    }
+    */
+    /*
+        *
+       ***
+      *****
+     *******
+    */
+    /*
+    for(let i=0; i<4; i++){
+        for(let j=4; i<=j; j--){
+            document.write("-");
+        }
+        for(let k=0; i*2>=k; k++){
+            document.write("*");
+        }
+        document.write("<br />");
+    }
+    */
+   
+    //Mission1. while문을 이용하여 구구단 출력
+    /* let i=1;
+    while(i<=9){
+        document.write(`5x${i} = ${i*5}<br />`);
+        i++;
+    }
+    //Mission2. 5행 5열 표를 만들고 1부터 25까지 출력
+    let num=1;
+    let t="<table border=1>";
+    for(let i=1; i<=5; i++){
+        t+="<tr>";
+            for(let j=1; j<=5; j++) {
+                t+=`<td>${num}</td>`
+                num++
+            }
+            t+="</tr>";
+    }
+    t+="</table>";
+    console.log(t);
+    document.write(t);
+    */
+
+    </script>
+</body>
+</html>
