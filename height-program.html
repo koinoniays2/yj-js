@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(x, y) {
+            if(isNaN(x)===true || isNaN(y)===true){
+                // document.write("숫자로 입력하세요. <br />");
+                // document.write("새로고침 하세요.");
+                alert("슷자로 입력하세요.");
+                test(Number(prompt("당신의 신장은?")),Number(prompt("당신의 체중은?")));
+            } else {
+                let aver = (x-100)*0.9;
+                document.write(`당신의 신장은 ${x}, 체중은 ${y} 입니다. <br />`);
+                document.write(`적정 체중은 ${aver} 입니다. <br />`);
+                let comp = ((aver > kg) ? "적정 체중이거나 미달입니다." : "적정 체중을 초과했습니다.");
+                document.write(comp);
+                }
+            }
+        test(Number(prompt("당신의 신장은?")),Number(prompt("당신의 체중은?")));
+
+        // // 사용자로부터 신장과 체중을 입력받아 출력
+        // let cm = Number(prompt("당신의 신장은?"));
+        // let kg = Number(prompt("당신의 체중은?"));
+
+        // if(isNaN(cm)===true||isNaN(kg)===true){
+        //     document.write("숫자로 입력하세요. <br />");
+        //     document.write("새로고침 하세요.");
+        // }else{
+        // // 적정 체중 구하기
+        // let aver = (cm-100)*0.9;
+        // document.write(`당신의 신장은 ${cm}, 체중은 ${kg} 입니다. <br />`);
+        // document.write(`적정 체중은 ${aver} 입니다. <br />`);
+                
+        // // 사용자의 체중과 적정 체중을 비교하고 출력
+        // let comp = ((aver > kg) ? "적정 체중이거나 미달입니다." : "적정 체중을 초과했습니다.");
+        // document.write(comp);
+        // }
+    </script>
+</body>
+</html>
