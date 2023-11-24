@@ -141,6 +141,7 @@
    */
 
    // 연습문제
+   /*
    let arr1=["사과", "배", "포도", "귤"];
    let arr2=["밤", "오이", "상추"];
 
@@ -162,11 +163,122 @@
    result.splice(3, 1, "치킨", "피자");
    console.log(result); //  ['포도', '오이', '수박', '치킨', '피자', '사과', '배', '밤']
 
+    
+    let arrs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    
+    function filterCall(element) {
+        return element > 5;
+    }
+    console.log(arrs.filter(filterCall));
 
+    function mapCall(element) {
+        return element * 2;
+    }
+    */
 
-   
+    //문자열함수
+    /*
+    let t = "Hello Thank you good luck to you";
+    document.write(t.charAt(16) + "<br />"); //g
+    document.write(t.indexOf("you") + "<br />"); //12
+    document.write(t.indexOf("you", 16) + "<br />"); //29
+    document.write(t.lastIndexOf("you") + "<br />"); //29
+    document.write(t.lastIndexOf("you", 25) + "<br />"); //12
+    document.write(t.match("luck") + "<br />"); //luck
+    document.write(t.search("you") + "<br />"); //12
+    document.write(t.substr(21, 4) + "<br />"); //luck
+    document.write(t.substring(6, 12) + "<br />"); //Thank
+    document.write(t.replace("you", "me") + "<br />"); //Hello Thank me good luck to you
+    document.write(t.toLowerCase() + "<br />"); //hello thank you good luck to you
+    document.write(t.toUpperCase() + "<br />"); //HELLO THANK YOU GOOD LUCK TO YOU
+    document.write(t.length + "<br />"); //32
 
+    let s=t.split(" "); //csv 데이터를 가져올 때 많이씀
+    document.write(s[0], "<br />"); //Hello
+    document.write(s[4], "<br />"); //luck
 
+    let str = "A";
+    t = str.charCodeAt(0); //65
+    document.write(t, "<br />");
+    document.write(String.fromCharCode(65)); //A
+    */
+
+    //문자열 문제
+
+    /*
+    let text = new String("Wikipedia is a free online encyclopedia");
+       
+    //1번 Wikipedia encyclopedia 출력
+    console.log(text.match("Wikipedia") +" "+ text.match("encyclopedia"));
+    let arry = text.split(" ");
+    console.log(`${arry[0]} ${arry[5]}`);
+
+    //2번 online을 offline으로 바꾼 후 "offline encyclopedia"출력
+    console.log((text.replace("online", "offline")).substring(20));
+
+    let offline = text.replace("online", "offline");
+    console.log(offline.substring(offline.indexOf("offline")));
+
+    let arry2 = offline.split(" ");
+    console.log(`${arry2[4]} ${arry2[5]}`);
+
+    //3번 text문자열을 10자까지 출력 후 뒤에 '...' 추가
+    console.log(text.substring(0,10)+ "..."); //글자 줄일때
+    */
+
+    /*
+    let userName = prompt("당신의 이름은");
+    let upperName = userName.toUpperCase();
+    document.write(upperName, "<br />");
+    let userNum = prompt("당신의 연락처는?");
+    let result = userNum.substring(0, userNum.length-4) +"****";
+    console.log(userNum.substring(8));
+    document.write(result, "<br />");
+    */
+
+    /*
+    let userEmail = prompt("당신의 이메일 주소는?");
+    let arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+    let check1 = false;
+    let check2 = false;
+
+    if(userEmail.includes("@")) (check1=true); //includes true or false값 반환
+
+    for(let i=0; i<arrUrl.length; i++) {
+        if(userEmail.indexOf(arrUrl[i]) > 0) {
+            check2 = true;
+        }
+    }
+
+    if(check1 && check2) {
+        document.write(userEmail);
+    } else {
+        alert("이메일 형식이 잘못되었습니다.");
+    }
+    */
+
+    // 퀴즈
+    /* 1. 출력화면 
+    H
+    E
+    L
+    L
+    O */
+    let myString = "Hello, World!";
+    for(let i=0; i<5; i++) {
+        let char = myString.charAt(i);
+        document.write(char.toUpperCase(), "<br />");
+    }
+
+    // 2.myString에서 World가 포함되어있으면 split()을 이용하여 Hello를 출력하세요.
+    
+
+    
+    // 3.전화번호를 입력받아 010-****-0000을 출력 replace()이용
+    let userNum = prompt("전화번호를 입력하세요(010-1234-5678)");
+    document.write(userNum.replace(userNum.substring(4,8), "****"));
+    
     </script>
 </body>
 </html>
