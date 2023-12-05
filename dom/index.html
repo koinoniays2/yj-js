@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny' Portfolio</title>
+    
+    <style>
+        * {margin: 0;} /* 전체 마진 0*/
+        a {text-decoration: none;  color:#ffffff;
+            } /* a 태그의 글자 밑줄 없앰*/
+
+        /* header 스타일*/
+        header {background-color: skyblue; height:100px;
+            background-image: url('images/back.jpg'); /* 배경 이미지 삽입 */
+        }
+        li {list-style-type: none;  /* 리스트 기호 없앰*/
+            display: inline-block; /* 리스트 가로 정렬*/
+            padding: 50px; /* 바깥쪽 여백 */
+        }
+        /* contents  스타일*/
+        article {line-height: 30px;
+                    padding:50px;}
+        h2 {margin-bottom: 20px;}
+        
+        /* gallery 이미지 높이 설정 */
+        img {height:300px;}
+
+        /* footer  스타일*/
+        footer {background-color: rgb(41, 104, 167); height: 100px;
+            text-align: center; /* 텍스트 가로 중간 정렬 */
+            /* padding:40px;
+            box-sizing: border-box; */
+            line-height: 100px; /* 줄간격을 박스 높이와 동일하게 설정해서 텍스트를 세로에 대해 중간 정렬*/
+        }
+
+        #goto-top {
+            position: fixed; /* 위치 고정 */
+            right: 10px;      /* 오른쪽 10px 위치배치 */
+            bottom: 10px;  /* 아래쪽 10px 위치 배치 */
+            border:1px solid lightgray;
+            padding:10px;
+            background-color: rgba(100,100,100,0.5);  /* 투명한 배경색 지정 */
+            border-radius: 8px;  /* 둥근 테두리 반지름 설정 */
+        }
+        /* goto-top 아이디를 가진 요소의 아래 a 태그에만 스타일 지정 */
+        #goto-top a{font-weight: bold; color:#dddddd;} /* 글자 스타일 굵게 지정, 글자색 지정*/
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="#profile"><li>Profile</li></a>
+                <a href="#skills"><li>Skills</li></a>
+                <a href="#gallery"><li>Gallery</li></a>
+                <a href="#links"><li>Links</li></a>
+                <a href="#board"><li>Board</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div id="contents">
+        <article class="article1">
+            <!-- profile 책갈피 지정 -->
+            <h2 id="profile">Profile</h2>
+            - Currently, Professor in Computer Information at Yeungjin Vocational Training Institute<br/>
+            - KyungBuk National University, Digital Media Art, Ph.D<br/>
+            - KyungBuk National University, Computer Information, M.S<br/>
+            - KyungBuk National University, Deutch Language, B.A<br/>
+        </article>
+
+        <article class="article2">
+            <h2 id="skills">Skills</h2>
+            - Web Contents Planning
+            - UI/UX Design<br/>
+            - Web Publishing
+            - Front-end web development<br/>
+            - Back-end web development<br/>
+            - Linux Server<br/>
+        </article>
+
+        <article>
+            <h2 id="gallery">Gallery</h2>
+            <img src="images/gallery01.jpg">
+            <img src="images/gallery02.jpg">
+            <img src="images/gallery03.jpg">
+        </article>
+
+        <article>
+            <h2 id="links">Links</h2>
+            - W3schools.com<br/>
+            - GNU Board<br/>
+            - Dothome<br/>
+            - Gabia<br/>
+            - GDweb
+        </article>
+    </div>
+    <div id="goto-top">
+        <a href="#">Top</a>
+    </div>
+    <footer>
+        © 2023 by Sun-hee Lee. For more Information, contact sunnylee@yj.or.kr
+    </footer>
+    <script src="index.js"></script>
+    
+</body>
+</html>
