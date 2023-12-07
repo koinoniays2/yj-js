@@ -24,7 +24,7 @@
         h2 {margin-bottom: 20px;}
         
         /* gallery 이미지 높이 설정 */
-        img {height:300px;}
+        img {height:300px; display: none;}
 
         /* footer  스타일*/
         footer {background-color: rgb(41, 104, 167); height: 100px;
@@ -53,7 +53,7 @@
             <ul>
                 <a href="#profile"><li>Profile</li></a>
                 <a href="#skills"><li>Skills</li></a>
-                <a href="#gallery"><li>Gallery</li></a>
+                <a href="#gallery" id="menu-gallery"><li>Gallery</li></a>
                 <a href="#links"><li>Links</li></a>
                 <a href="#board"><li>Board</li></a>
             </ul>
@@ -71,7 +71,7 @@
 
         <article class="article2">
             <h2 id="skills">Skills</h2>
-            - Web Contents Planning
+            - Web Contents Planning<br />
             - UI/UX Design<br/>
             - Web Publishing
             - Front-end web development<br/>
@@ -79,7 +79,7 @@
             - Linux Server<br/>
         </article>
 
-        <article>
+        <article class="article3">
             <h2 id="gallery">Gallery</h2>
             <img src="images/gallery01.jpg">
             <img src="images/gallery02.jpg">
