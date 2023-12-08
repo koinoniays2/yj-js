@@ -167,6 +167,8 @@ let arrSubject = ["국어", "수학"];
 let result = testAvg(arrSubject);
 document.write(`평균 점수는 ${result} 점입니다.`);
 */
+
+/* 이전, 다음
 let num = 1;
 function gallery(direct) {
     if(direct) {
@@ -179,3 +181,51 @@ function gallery(direct) {
     let imgTag = document.getElementById("photo");
     imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
 }
+*/
+
+// 재귀함수
+/* let num = 0;
+function testFnc(){
+    num++;
+    document.write(num, "<br />");
+    if(num == 10) return;
+
+    testFnc();
+}
+
+testFnc();
+console.log(num);
+*/
+function CheckWeight(name, height, weight) {
+    this.userName = name;
+    this.userHeight = height;
+    this.userWeight = weight;
+    this.minWeight;
+    this.maxWeight;
+    
+    this.getinfo = function() {
+        let str ="";
+        str = `이름: ${this.userName}<br /> 키:${this.userHeight}<br /> 몸무게:${this.userWeight}<br />`;
+        return str;
+    }
+    this.getResult = function() {
+        this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+        this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+        if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight) {
+            return "정상 몸무게입니다.";
+        } else if(this.userWeight <= this.minWeight) {
+            return "정상 몸무게보다 미달입니다";
+        } else {
+            return "정상 몸무게보다 초과입니다.";
+        }
+    }
+}
+
+let jang = new CheckWeight("장보리", 168, 62);
+let park = new CheckWeight("박달재", 180, 88);
+console.log(jang);
+console.log(park);
+
+document.write(jang.getinfo());
+document.write(jang.getResult());
