@@ -1,3 +1,4 @@
+// Queue
 class Queue {
     constructor() {
         this.store = {};
@@ -46,6 +47,31 @@ q.push(20);
 q.push(30);
 q.push(40);
 q.popleft();
-for(let i in q.store) {
+for (let i in q.store) {
     console.log(q.store[i]);
+}
+
+// Linked List
+/*
+const list = {
+    head: {
+        value: 6,
+        next: {
+            value: 10,
+            next: {
+                value: 12,
+                next: {
+                    value: 3,
+                    next: null
+                }
+            }
+        }
+    }
+};
+console.log(list); */
+class ListNode {
+    constructor(data) {
+        this.data = data; // 데이터
+        this.next = null; // 포인터
+    }
 }
