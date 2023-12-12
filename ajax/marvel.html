@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .marvel-li {
+            list-style: none; font-size: 1.3rem; margin-bottom: 10px;
+        }
+
+        #img-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            height: 200px; overflow: hidden;
+            border: 1px solid black;
+        }
+        .marvel-img {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            transition: transform 0.5s ease;
+            border: 3px solid black;
+
+        }
+        #prev-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+        }
+        #next-btn {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="img-container">
+        <button id="prev-btn">이전</button>
+        <button id="next-btn">다음</button>
+    </div>
+    <script src="marvel.js"></script>
+</body>
+</html>

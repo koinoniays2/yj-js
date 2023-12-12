@@ -11,10 +11,10 @@ fetch('https://api.odcloud.kr/api/15052602/v1/uddi:855807e2-fe8a-4e47-8a5a-ce189
             ul.appendChild(li);
         }
         */
-        console.log(json);
+        // console.log(json);
         let table = document.createElement('table');
         foods.appendChild(table);
-        for (let i = 0; i < json.currentCount   ; i++) {
+        for (let i = 0; i < json.currentCount; i++) {     
             let tr = document.createElement('tr');
 
             let td = document.createElement('td');
