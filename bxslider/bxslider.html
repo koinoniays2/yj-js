@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".slider").bxSlider({
+                // mode: 'horizontal',// 가로 방향 수평 슬라이드
+                // speed: 500,        // 이동 속도를 설정
+                // pager: false,      // 현재 위치 페이징 표시 여부 설정        
+                // moveSlides: 1,     // 슬라이드 이동시 개수
+                slideWidth: 600,   // 슬라이드 너비
+                // minSlides: 4,      // 최소 노출 개수
+                // maxSlides: 4,      // 최대 노출 개수
+                // slideMargin: 5,    // 슬라이드간의 간격
+                // auto: true,        // 자동 실행 여부
+                // autoHover: true,   // 마우스 호버시 정지 여부
+                // controls: false    // 이전 다음 버튼 노출 여부
+            });
+        });
+    </script>
+    <style>
+        .slider>div {
+            display: flex;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="slider">
+        <div><img src="http://placehold.it/300x200"><img src="http://placehold.it/300x200"></div>
+        <div><img src="http://placehold.it/300x200"></div>
+        <div><img src="http://placehold.it/300x200"></div>
+        <div><img src="http://placehold.it/300x200"></div>
+        <div><img src="http://placehold.it/300x200"></div>
+        <div><img src="http://placehold.it/300x200"></div>
+        <div><img src="http://placehold.it/300x200"></div>
+    </div>
+    <!-- <div id="map" style="width:100%;height:350px;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e6541d59197514215349b9b2b616b694"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(35.8756324, 128.6817047), // 지도의 중심좌표
+                level: 1// 지도의 확대 레벨
+            };
+
+        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption); 
+    </script> -->
+
+</body>
+</html>
